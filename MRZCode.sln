@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRZCodeParser", "MRZCodeParser\MRZCodeParser.csproj", "{38650BF4-B037-4862-AC4C-6CAD41390FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MRZCodeParser.Tests", "MRZCodeParser.Tests\MRZCodeParser.Tests.csproj", "{394042BD-1A96-4803-A6BF-E851D5B466BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38650BF4-B037-4862-AC4C-6CAD41390FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38650BF4-B037-4862-AC4C-6CAD41390FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38650BF4-B037-4862-AC4C-6CAD41390FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38650BF4-B037-4862-AC4C-6CAD41390FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394042BD-1A96-4803-A6BF-E851D5B466BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394042BD-1A96-4803-A6BF-E851D5B466BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394042BD-1A96-4803-A6BF-E851D5B466BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394042BD-1A96-4803-A6BF-E851D5B466BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
