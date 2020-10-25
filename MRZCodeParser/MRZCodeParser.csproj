@@ -6,6 +6,12 @@
         <PackageVersion>0.1.0</PackageVersion>
         <Authors>snifter</Authors>
         <AssemblyVersion>0.1.0</AssemblyVersion>
+        <Title>MRZCodeParser</Title>
+        <PackageProjectUrl>https://github.com/snifter/MRZCode.NET</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/snifter/MRZCode.NET/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/snifter/MRZCode.NET.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <Description>MRZ parser for .NET</Description>
     </PropertyGroup>
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
