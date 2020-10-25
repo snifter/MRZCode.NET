@@ -2,6 +2,10 @@
 
     <PropertyGroup>
         <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>0.1.0</PackageVersion>
+        <Authors>snifter</Authors>
+        <AssemblyVersion>0.1.0</AssemblyVersion>
     </PropertyGroup>
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
