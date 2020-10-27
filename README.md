@@ -27,19 +27,19 @@ ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
             
             var mrzCode = MrzCode.Parse(text);
             
-            Console.WriteLine("DocumentType:             {0}", mrzCode.Fields[FieldType.DocumentType].Value);
-            Console.WriteLine("CountryCode:              {0}", mrzCode.Fields[FieldType.CountryCode].Value);
-            Console.WriteLine("DocumentNumber:           {0}", mrzCode.Fields[FieldType.DocumentNumber].Value);
-            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode.Fields[FieldType.DocumentNumberCheckDigit].Value);
-            Console.WriteLine("BirthDate:                {0}", mrzCode.Fields[FieldType.BirthDate].Value);
-            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode.Fields[FieldType.BirthDateCheckDigit].Value);
-            Console.WriteLine("Sex:                      {0}", mrzCode.Fields[FieldType.Sex].Value);
-            Console.WriteLine("ExpiryDate:               {0}", mrzCode.Fields[FieldType.ExpiryDate].Value);
-            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Console.WriteLine("Nationality:              {0}", mrzCode.Fields[FieldType.Nationality].Value);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode.Fields[FieldType.OptionalData2].Value);
-            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode.Fields[FieldType.OverallCheckDigit].Value);
-            Console.WriteLine("Names:                    {0}", mrzCode.Fields[FieldType.Names].Value);
+            Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
+            Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
+            Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
+            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
+            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
+            Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
+            Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
+            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
+            Console.WriteLine("Nationality:              {0}", mrzCode[FieldType.Nationality]);
+            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
+            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
+            Console.WriteLine("Names:                    {0}", mrzCode[FieldType.Names]);
             
             Console.WriteLine();
         }
@@ -63,19 +63,19 @@ D231458907UTO7408122F1204159<<<<<<<6";
             
             var mrzCode = MrzCode.Parse(text);
             
-            Console.WriteLine("DocumentType:             {0}", mrzCode.Fields[FieldType.DocumentType].Value);
-            Console.WriteLine("CountryCode:              {0}", mrzCode.Fields[FieldType.CountryCode].Value);
-            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode.Fields[FieldType.PrimaryIdentifier].Value);
-            Console.WriteLine("DocumentNumber:           {0}", mrzCode.Fields[FieldType.DocumentNumber].Value);
-            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode.Fields[FieldType.DocumentNumberCheckDigit].Value);
-            Console.WriteLine("Nationality:              {0}", mrzCode.Fields[FieldType.Nationality].Value);
-            Console.WriteLine("BirthDate:                {0}", mrzCode.Fields[FieldType.BirthDate].Value);
-            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode.Fields[FieldType.BirthDateCheckDigit].Value);
-            Console.WriteLine("Sex:                      {0}", mrzCode.Fields[FieldType.Sex].Value);
-            Console.WriteLine("ExpiryDate:               {0}", mrzCode.Fields[FieldType.ExpiryDate].Value);
-            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode.Fields[FieldType.OptionalData2].Value);
-            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode.Fields[FieldType.OverallCheckDigit].Value);
+            Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
+            Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
+            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
+            Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
+            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("Nationality:              {0}", mrzCode[FieldType.Nationality]);
+            Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
+            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
+            Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
+            Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
+            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
+            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
+            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
             
             Console.WriteLine();
         }
@@ -99,20 +99,20 @@ L898902C36UTO7408122F1204159ZE184226B<<<<<10";
             
             var mrzCode = MrzCode.Parse(text);
             
-            Console.WriteLine("DocumentType:             {0}", mrzCode.Fields[FieldType.DocumentType].Value);
-            Console.WriteLine("CountryCode:              {0}", mrzCode.Fields[FieldType.CountryCode].Value);
-            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode.Fields[FieldType.PrimaryIdentifier].Value);
-            Console.WriteLine("DocumentNumber:           {0}", mrzCode.Fields[FieldType.DocumentNumber].Value);
-            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode.Fields[FieldType.DocumentNumberCheckDigit].Value);
-            Console.WriteLine("Nationality:              {0}", mrzCode.Fields[FieldType.Nationality].Value);
-            Console.WriteLine("BirthDate:                {0}", mrzCode.Fields[FieldType.BirthDate].Value);
-            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode.Fields[FieldType.BirthDateCheckDigit].Value);
-            Console.WriteLine("Sex:                      {0}", mrzCode.Fields[FieldType.Sex].Value);
-            Console.WriteLine("ExpiryDate:               {0}", mrzCode.Fields[FieldType.ExpiryDate].Value);
-            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode.Fields[FieldType.OptionalData2].Value);
-            Console.WriteLine("OptionalData2CheckDigit:  {0}", mrzCode.Fields[FieldType.OptionalData2CheckDigit].Value);
-            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode.Fields[FieldType.OverallCheckDigit].Value);
+            Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
+            Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
+            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
+            Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
+            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("Nationality:              {0}", mrzCode[FieldType.Nationality]);
+            Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
+            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
+            Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
+            Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
+            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
+            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
+            Console.WriteLine("OptionalData2CheckDigit:  {0}", mrzCode[FieldType.OptionalData2CheckDigit]);
+            Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
             
             Console.WriteLine();
         }
@@ -136,18 +136,18 @@ L8988901C4XXX4009078F96121096ZE184226B<<<<<<";
             
             var mrzCode = MrzCode.Parse(text);
             
-            Console.WriteLine("DocumentType:             {0}", mrzCode.Fields[FieldType.DocumentType].Value);
-            Console.WriteLine("CountryCode:              {0}", mrzCode.Fields[FieldType.CountryCode].Value);
-            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode.Fields[FieldType.PrimaryIdentifier].Value);
-            Console.WriteLine("DocumentNumber:           {0}", mrzCode.Fields[FieldType.DocumentNumber].Value);
-            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode.Fields[FieldType.DocumentNumberCheckDigit].Value);
-            Console.WriteLine("Nationality:              {0}", mrzCode.Fields[FieldType.Nationality].Value);
-            Console.WriteLine("BirthDate:                {0}", mrzCode.Fields[FieldType.BirthDate].Value);
-            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode.Fields[FieldType.BirthDateCheckDigit].Value);
-            Console.WriteLine("Sex:                      {0}", mrzCode.Fields[FieldType.Sex].Value);
-            Console.WriteLine("ExpiryDate:               {0}", mrzCode.Fields[FieldType.ExpiryDate].Value);
-            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode.Fields[FieldType.OptionalData2].Value);
+            Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
+            Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
+            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
+            Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
+            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("Nationality:              {0}", mrzCode[FieldType.Nationality]);
+            Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
+            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
+            Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
+            Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
+            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
+            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
             
             Console.WriteLine();
         }
@@ -172,18 +172,18 @@ L8988901C4XXX4009078F9612109<<<<<<<<";
             
             var mrzCode = MrzCode.Parse(text);
             
-            Console.WriteLine("DocumentType:             {0}", mrzCode.Fields[FieldType.DocumentType].Value);
-            Console.WriteLine("CountryCode:              {0}", mrzCode.Fields[FieldType.CountryCode].Value);
-            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode.Fields[FieldType.PrimaryIdentifier].Value);
-            Console.WriteLine("DocumentNumber:           {0}", mrzCode.Fields[FieldType.DocumentNumber].Value);
-            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode.Fields[FieldType.DocumentNumberCheckDigit].Value);
-            Console.WriteLine("Nationality:              {0}", mrzCode.Fields[FieldType.Nationality].Value);
-            Console.WriteLine("BirthDate:                {0}", mrzCode.Fields[FieldType.BirthDate].Value);
-            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode.Fields[FieldType.BirthDateCheckDigit].Value);
-            Console.WriteLine("Sex:                      {0}", mrzCode.Fields[FieldType.Sex].Value);
-            Console.WriteLine("ExpiryDate:               {0}", mrzCode.Fields[FieldType.ExpiryDate].Value);
-            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode.Fields[FieldType.OptionalData2].Value);
+            Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
+            Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
+            Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
+            Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
+            Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("Nationality:              {0}", mrzCode[FieldType.Nationality]);
+            Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
+            Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
+            Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
+            Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
+            Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
+            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
             
             Console.WriteLine();
         }
