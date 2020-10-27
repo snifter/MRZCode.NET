@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using MRZCodeParser.CodeTypes;
 
 namespace MRZCodeParser
 {
@@ -10,7 +11,7 @@ namespace MRZCodeParser
         public abstract CodeType Type { get; }
 
         public abstract IEnumerable<MrzLine> Lines { get; }
-        
+
         public string this[FieldType type] => Fields[type].Value;
 
         public FieldsCollection Fields

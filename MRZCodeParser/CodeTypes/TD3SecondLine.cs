@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 
-namespace MRZCodeParser
+namespace MRZCodeParser.CodeTypes
 {
-    internal class TD2SecondLine : MrzLine
+    internal class TD3SecondLine : MrzLine
     {
-        internal TD2SecondLine(string value) : base(value)
+        internal TD3SecondLine(string value) : base(value)
         {
         }
 
         protected override string Pattern =>
-            "([A-Z0-9<]{9})([0-9]{1})([A-Z]{3})([0-9]{6})([0-9]{1})([M|F|X|<]{1})([0-9]{6})([0-9]{1})([A-Z0-9<]{7})([0-9]{1})";
+            "([A-Z0-9<]{9})([0-9]{1})([A-Z]{3})([0-9]{6})([0-9]{1})([M|F|X|<]{1})([0-9]{6})([0-9]{1})([A-Z0-9<]{14})([0-9]{1})([0-9]{1})";
 
         protected override IEnumerable<FieldType> FieldTypes => new[]
         {
@@ -22,6 +22,7 @@ namespace MRZCodeParser
             FieldType.ExpiryDate,
             FieldType.ExpiryDateCheckDigit,
             FieldType.OptionalData2,
+            FieldType.OptionalData2CheckDigit,
             FieldType.OverallCheckDigit
         };
     }

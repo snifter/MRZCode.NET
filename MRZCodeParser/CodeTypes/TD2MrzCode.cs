@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MRZCodeParser
+namespace MRZCodeParser.CodeTypes
 {
     internal class TD2MrzCode : MrzCode
     {

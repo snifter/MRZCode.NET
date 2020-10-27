@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MRZCodeParser
+namespace MRZCodeParser.CodeTypes
 {
     internal class MRVASecondLine : MrzLine
     {
