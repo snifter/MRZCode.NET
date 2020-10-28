@@ -35,7 +35,7 @@ namespace MRZCodeParser
         
         protected abstract string Pattern { get; }
         
-        protected abstract IEnumerable<FieldType> FieldTypes { get; }
+        internal abstract IEnumerable<FieldType> FieldTypes { get; }
 
         internal MrzLine(string value)
         {

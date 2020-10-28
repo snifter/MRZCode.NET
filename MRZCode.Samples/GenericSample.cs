@@ -1,16 +1,8 @@
-# MRZCode.NET
-MRZ (machine readable zone) parser for .NET. It supports following formats:
-- TD1 (3 lines, each has 30 characters),
-- TD2 (2 lines, each has 36 characters),
-- TD3 (2 lines, each has 44 characters),
-- MRVA (2 lines, each has 44 characters),
-- MRVB (2 lines, each has 36 characters).
+using System;
+using MRZCodeParser;
 
-Implementation bases on regex patterns form [ultimateMRZ project](https://www.doubango.org/SDKs/mrz/docs/MRZ_parser.html).
-
-# Samples
-
-```C#
+namespace MRZCode.Samples
+{
     public static class GenericSample
     {
         public static void Run()
@@ -48,6 +40,4 @@ L8988901C4XXX4009078F9612109<<<<<<<<"
             }
         }
     }
-```
-
-More samples you can find in MRZCode.Samples folder.
+}

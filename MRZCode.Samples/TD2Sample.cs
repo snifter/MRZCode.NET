@@ -9,14 +9,16 @@ namespace MRZCode.Samples
         {
             var text = @"I<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<
 D231458907UTO7408122F1204159<<<<<<<6";
-            
+
             Console.WriteLine("TD2 code sample");
             Console.WriteLine();
             Console.WriteLine(text);
             Console.WriteLine();
-            
+
             var mrzCode = MrzCode.Parse(text);
-            
+
+            Console.WriteLine("Code type:                {0}", mrzCode.Type);
+
             Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
             Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
             Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
@@ -30,7 +32,7 @@ D231458907UTO7408122F1204159<<<<<<<6";
             Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
             Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
             Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
-            
+
             Console.WriteLine();
         }
     }

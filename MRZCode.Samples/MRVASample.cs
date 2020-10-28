@@ -9,14 +9,16 @@ namespace MRZCode.Samples
         {
             var text = @"V<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L8988901C4XXX4009078F96121096ZE184226B<<<<<<";
-            
+
             Console.WriteLine("MRVA code sample");
             Console.WriteLine();
             Console.WriteLine(text);
             Console.WriteLine();
-            
+
             var mrzCode = MrzCode.Parse(text);
-            
+
+            Console.WriteLine("Code type:                {0}", mrzCode.Type);
+
             Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
             Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
             Console.WriteLine("PrimaryIdentifier:        {0}", mrzCode[FieldType.PrimaryIdentifier]);
@@ -29,7 +31,7 @@ L8988901C4XXX4009078F96121096ZE184226B<<<<<<";
             Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
             Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
             Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
-            
+
             Console.WriteLine();
         }
     }

@@ -9,8 +9,8 @@ namespace MRZCodeParser.CodeTypes
         }
 
         protected override string Pattern => "(P[A-Z0-9<]{1})([A-Z]{3})([A-Z0-9<]{39})";
-        
-        protected override IEnumerable<FieldType> FieldTypes => new[]
+
+        internal override IEnumerable<FieldType> FieldTypes => new[]
         {
             FieldType.DocumentType,
             FieldType.CountryCode,

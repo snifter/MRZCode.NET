@@ -1,3 +1,4 @@
+using System.Linq;
 using Xunit;
 
 namespace MRZCodeParser.Tests
@@ -23,6 +24,35 @@ namespace MRZCodeParser.Tests
             Assert.Equal("ZE184226B", target[FieldType.OptionalData2]);
             Assert.Equal("1", target[FieldType.OptionalData2CheckDigit]);
             Assert.Equal("0", target[FieldType.OverallCheckDigit]);
+        }
+
+        [Fact]
+        public void FieldTypeCollectionTest()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD3);
+
+            var expected = new []
+            {
+                FieldType.DocumentType,
+                FieldType.CountryCode,
+                FieldType.PrimaryIdentifier,
+                FieldType.DocumentNumber,
+                FieldType.DocumentNumberCheckDigit,
+                FieldType.Nationality,
+                FieldType.BirthDate,
+                FieldType.BirthDateCheckDigit,
+                FieldType.Sex,
+                FieldType.ExpiryDate,
+                FieldType.ExpiryDateCheckDigit,
+                FieldType.OptionalData2,
+                FieldType.OptionalData2CheckDigit,
+                FieldType.OverallCheckDigit
+            };
+
+            var actual = target.FieldTypes.ToList();
+            
+            Assert.Equal(expected.Length, actual.Count());
+            Assert.Equal(expected, actual);
         }
     }
 }

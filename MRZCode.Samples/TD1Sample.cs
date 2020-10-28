@@ -10,14 +10,16 @@ namespace MRZCode.Samples
             var text = @"I<UTOD231458907<<<<<<<<<<<<<<<
 7408122F1204159UTO<<<<<<<<<<<6
 ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
-            
+
             Console.WriteLine("TD1 code sample");
             Console.WriteLine();
             Console.WriteLine(text);
             Console.WriteLine();
-            
+
             var mrzCode = MrzCode.Parse(text);
-            
+
+            Console.WriteLine("Code type:                {0}", mrzCode.Type);
+
             Console.WriteLine("DocumentType:             {0}", mrzCode[FieldType.DocumentType]);
             Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
             Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
@@ -31,7 +33,7 @@ ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
             Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
             Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
             Console.WriteLine("Names:                    {0}", mrzCode[FieldType.Names]);
-            
+
             Console.WriteLine();
         }
     }

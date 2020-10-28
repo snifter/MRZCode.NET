@@ -26,6 +26,6 @@ namespace MRZCodeParser.Tests
         }
 
         protected override string Pattern { get; }
-        protected override IEnumerable<FieldType> FieldTypes { get; }
+        internal override IEnumerable<FieldType> FieldTypes { get; }
     }
 }

@@ -11,6 +11,8 @@ namespace MRZCodeParser
         public abstract CodeType Type { get; }
 
         public abstract IEnumerable<MrzLine> Lines { get; }
+        
+        public IEnumerable<FieldType> FieldTypes => Lines.SelectMany(x => x.FieldTypes);
 
         public string this[FieldType type] => Fields[type].Value;
 
