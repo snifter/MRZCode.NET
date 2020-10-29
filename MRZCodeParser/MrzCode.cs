@@ -17,6 +17,7 @@ namespace MRZCodeParser
 
         public string this[FieldType type] => Fields[type].Value;
 
+        [Obsolete(message:"Will be changed to internal in next version")]
         public FieldsCollection Fields
         {
             get
