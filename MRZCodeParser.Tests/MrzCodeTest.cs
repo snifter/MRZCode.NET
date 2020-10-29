@@ -29,5 +29,17 @@ namespace MRZCodeParser.Tests
             var target = MrzCode.Parse(input);
             Assert.Equal(expected, target.Lines.Count());
         }
+
+        [Theory]
+        [InlineData(MrzSamples.TD1)]
+        [InlineData(MrzSamples.TD2)]
+        [InlineData(MrzSamples.TD3)]
+        [InlineData(MrzSamples.MRVA)]
+        [InlineData(MrzSamples.MRVB)]
+        public void ToStringReturnsInputLines(string input)
+        {
+            var target = MrzCode.Parse(input);
+            Assert.Equal(input, target.ToString());
+        }
     }
 }

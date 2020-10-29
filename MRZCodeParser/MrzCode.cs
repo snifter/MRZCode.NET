@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MRZCodeParser.CodeTypes;
@@ -33,6 +34,11 @@ namespace MRZCodeParser
         protected MrzCode(IEnumerable<string> lines)
         {
             RawLines = lines;
+        }
+
+        public override string ToString()
+        {
+            return string.Join(Environment.NewLine, Lines.Select(x => x.Value));
         }
 
         public static MrzCode Parse(string code)
