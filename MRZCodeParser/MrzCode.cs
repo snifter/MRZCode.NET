@@ -15,7 +15,9 @@ namespace MRZCodeParser
         
         public IEnumerable<FieldType> FieldTypes => Lines.SelectMany(x => x.FieldTypes);
 
-        public string this[FieldType type] => Fields[type].Value;
+        public string this[FieldType type] => Fields[ChangeBackwardFieldTypeToCurrent(type)].Value;
+
+        protected virtual FieldType ChangeBackwardFieldTypeToCurrent(FieldType type) => type;
 
         [Obsolete(message:"Will be changed to internal in next version")]
         public FieldsCollection Fields

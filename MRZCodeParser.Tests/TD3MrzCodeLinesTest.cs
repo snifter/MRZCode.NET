@@ -28,8 +28,8 @@ namespace MRZCodeParser.Tests
             Assert.Equal("F", target.Fields[FieldType.Sex].Value);
             Assert.Equal("120415", target.Fields[FieldType.ExpiryDate].Value);
             Assert.Equal("9", target.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Assert.Equal("ZE184226B", target.Fields[FieldType.OptionalData2].Value);
-            Assert.Equal("1", target.Fields[FieldType.OptionalData2CheckDigit].Value);
+            Assert.Equal("ZE184226B", target.Fields[FieldType.OptionalData].Value);
+            Assert.Equal("1", target.Fields[FieldType.OptionalDataCheckDigit].Value);
             Assert.Equal("0", target.Fields[FieldType.OverallCheckDigit].Value);
         }
     }

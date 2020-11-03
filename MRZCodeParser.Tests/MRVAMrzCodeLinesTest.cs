@@ -28,7 +28,7 @@ namespace MRZCodeParser.Tests
             Assert.Equal("F", target.Fields[FieldType.Sex].Value);
             Assert.Equal("961210", target.Fields[FieldType.ExpiryDate].Value);
             Assert.Equal("9", target.Fields[FieldType.ExpiryDateCheckDigit].Value);
-            Assert.Equal("6ZE184226B", target.Fields[FieldType.OptionalData2].Value);
+            Assert.Equal("6ZE184226B", target.Fields[FieldType.OptionalData].Value);
         }
     }
 }

@@ -30,8 +30,8 @@ L898902C36UTO7408122F1204159ZE184226B<<<<<10";
             Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);
             Console.WriteLine("ExpiryDate:               {0}", mrzCode[FieldType.ExpiryDate]);
             Console.WriteLine("ExpiryDateCheckDigit:     {0}", mrzCode[FieldType.ExpiryDateCheckDigit]);
-            Console.WriteLine("OptionalData2:            {0}", mrzCode[FieldType.OptionalData2]);
-            Console.WriteLine("OptionalData2CheckDigit:  {0}", mrzCode[FieldType.OptionalData2CheckDigit]);
+            Console.WriteLine("OptionalData:             {0}", mrzCode[FieldType.OptionalData]);
+            Console.WriteLine("OptionalDataCheckDigit:   {0}", mrzCode[FieldType.OptionalDataCheckDigit]);
             Console.WriteLine("OverallCheckDigit:        {0}", mrzCode[FieldType.OverallCheckDigit]);
 
             Console.WriteLine();

@@ -21,7 +21,7 @@ namespace MRZCodeParser.CodeTypes
             FieldType.Sex,
             FieldType.ExpiryDate,
             FieldType.ExpiryDateCheckDigit,
-            FieldType.OptionalData2
+            FieldType.OptionalData
         };
     }
 }

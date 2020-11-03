@@ -24,6 +24,7 @@ ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
             Console.WriteLine("CountryCode:              {0}", mrzCode[FieldType.CountryCode]);
             Console.WriteLine("DocumentNumber:           {0}", mrzCode[FieldType.DocumentNumber]);
             Console.WriteLine("DocumentNumberCheckDigit: {0}", mrzCode[FieldType.DocumentNumberCheckDigit]);
+            Console.WriteLine("OptionalData1:            {0}", mrzCode[FieldType.OptionalData1]);
             Console.WriteLine("BirthDate:                {0}", mrzCode[FieldType.BirthDate]);
             Console.WriteLine("BirthDateCheckDigit:      {0}", mrzCode[FieldType.BirthDateCheckDigit]);
             Console.WriteLine("Sex:                      {0}", mrzCode[FieldType.Sex]);

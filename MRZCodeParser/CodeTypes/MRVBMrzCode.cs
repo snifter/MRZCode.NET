@@ -16,5 +16,14 @@ namespace MRZCodeParser.CodeTypes
             new MRVBFirstLine(RawLines.First()),
             new MRVBSecondLine(RawLines.Last())
         };
+
+        protected override FieldType ChangeBackwardFieldTypeToCurrent(FieldType type)
+        {
+            return type switch
+            {
+                FieldType.OptionalData2 => FieldType.OptionalData,
+                _ => type
+            };
+        }
     }
 }

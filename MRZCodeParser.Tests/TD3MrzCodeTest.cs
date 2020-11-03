@@ -9,7 +9,7 @@ namespace MRZCodeParser.Tests
         public void CodeFieldsTest()
         {
             var target = MrzCode.Parse(MrzSamples.TD3);
-            
+
             Assert.Equal(DocumentType.P.ToString(), target[FieldType.DocumentType]);
             Assert.Equal("UTO", target[FieldType.CountryCode]);
             Assert.Equal("ERIKSSON, ANNA MARIA", target[FieldType.PrimaryIdentifier]);
@@ -21,9 +21,19 @@ namespace MRZCodeParser.Tests
             Assert.Equal("F", target[FieldType.Sex]);
             Assert.Equal("120415", target[FieldType.ExpiryDate]);
             Assert.Equal("9", target[FieldType.ExpiryDateCheckDigit]);
-            Assert.Equal("ZE184226B", target[FieldType.OptionalData2]);
-            Assert.Equal("1", target[FieldType.OptionalData2CheckDigit]);
+            Assert.Equal("ZE184226B", target[FieldType.OptionalData]);
+            Assert.Equal("1", target[FieldType.OptionalDataCheckDigit]);
             Assert.Equal("0", target[FieldType.OverallCheckDigit]);
+        }
+
+
+        [Fact]
+        public void CodeFieldsTest_BackwardCompatibility()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD3);
+
+            Assert.Equal(target[FieldType.OptionalData], target[FieldType.OptionalData2]);
+            Assert.Equal(target[FieldType.OptionalDataCheckDigit], target[FieldType.OptionalData2CheckDigit]);
         }
 
         [Fact]
@@ -31,7 +41,7 @@ namespace MRZCodeParser.Tests
         {
             var target = MrzCode.Parse(MrzSamples.TD3);
 
-            var expected = new []
+            var expected = new[]
             {
                 FieldType.DocumentType,
                 FieldType.CountryCode,
@@ -44,13 +54,13 @@ namespace MRZCodeParser.Tests
                 FieldType.Sex,
                 FieldType.ExpiryDate,
                 FieldType.ExpiryDateCheckDigit,
-                FieldType.OptionalData2,
-                FieldType.OptionalData2CheckDigit,
+                FieldType.OptionalData,
+                FieldType.OptionalDataCheckDigit,
                 FieldType.OverallCheckDigit
             };
 
             var actual = target.FieldTypes.ToList();
-            
+
             Assert.Equal(expected.Length, actual.Count());
             Assert.Equal(expected, actual);
         }

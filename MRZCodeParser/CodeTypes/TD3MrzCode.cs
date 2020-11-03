@@ -16,5 +16,15 @@ namespace MRZCodeParser.CodeTypes
             new TD3FirstLine(RawLines.First()),
             new TD3SecondLine(RawLines.Last())
         };
+
+        protected override FieldType ChangeBackwardFieldTypeToCurrent(FieldType type)
+        {
+            return type switch
+            {
+                FieldType.OptionalData2 => FieldType.OptionalData,
+                FieldType.OptionalData2CheckDigit => FieldType.OptionalDataCheckDigit,
+                _ => type
+            };
+        }
     }
 }
