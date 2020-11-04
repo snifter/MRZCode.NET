@@ -41,5 +41,18 @@ namespace MRZCodeParser.Tests
             var target = MrzCode.Parse(input);
             Assert.Equal(input, target.ToString());
         }
+
+        [Theory]
+        [InlineData(MrzSamples.TD1, FieldType.PrimaryIdentifier)]
+        [InlineData(MrzSamples.TD1, FieldType.OptionalData)]
+        [InlineData(MrzSamples.TD1, FieldType.OptionalDataCheckDigit)]
+        [InlineData(MrzSamples.TD2, FieldType.Names)]
+        [InlineData(MrzSamples.TD2, FieldType.OptionalDataCheckDigit)]
+        [InlineData(MrzSamples.MRVB, FieldType.OverallCheckDigit)]
+        public void AccessToInvalidFieldTypeWithException(string input, FieldType invalidType)
+        {
+            var target = MrzCode.Parse(input);
+            Assert.Throws<MrzCodeException>(() => target[invalidType]);
+        }
     }
 }

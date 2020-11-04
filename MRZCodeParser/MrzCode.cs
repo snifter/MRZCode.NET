@@ -12,14 +12,28 @@ namespace MRZCodeParser
         public abstract CodeType Type { get; }
 
         public abstract IEnumerable<MrzLine> Lines { get; }
-        
+
         public IEnumerable<FieldType> FieldTypes => Lines.SelectMany(x => x.FieldTypes);
 
-        public string this[FieldType type] => Fields[ChangeBackwardFieldTypeToCurrent(type)].Value;
+        public string this[FieldType type]
+        {
+            get
+            {
+                var fields = Fields;
+                var targetType = ChangeBackwardFieldTypeToCurrent(type);
+
+                if (fields.Fields.All(x => x.Type != targetType))
+                {
+                    throw new MrzCodeException($"Code {Type} does not contain field {type}");
+                }
+
+                return fields[targetType].Value;
+            }
+        }
 
         protected virtual FieldType ChangeBackwardFieldTypeToCurrent(FieldType type) => type;
 
-        [Obsolete(message:"Will be changed to internal in next version")]
+        [Obsolete(message: "Will be changed to internal in next version")]
         public FieldsCollection Fields
         {
             get
