@@ -9,8 +9,9 @@ namespace MRZCodeParser
         public string Value { get; }
 
         public int Length => Value?.Length ?? 0;
-        
-        public FieldsCollection Fields {
+
+        public FieldsCollection Fields
+        {
             get
             {
                 var regex = new Regex(Pattern);
@@ -18,23 +19,23 @@ namespace MRZCodeParser
 
                 if (!match.Success)
                 {
-                    return new FieldsCollection(new Field[0]);
+                    throw new MrzCodeException($"Line: {Value} does not match to pattern: {Pattern}");
                 }
 
                 var fields = new List<Field>();
                 for (var i = 0; i < FieldTypes.Count(); i++)
                 {
                     fields.Add(new Field(
-                        FieldTypes.ElementAt(i), 
+                        FieldTypes.ElementAt(i),
                         new ValueCleaner(match.Groups[i + 1].Value).Clean()));
                 }
-                
+
                 return new FieldsCollection(fields);
             }
         }
-        
+
         protected abstract string Pattern { get; }
-        
+
         internal abstract IEnumerable<FieldType> FieldTypes { get; }
 
         internal MrzLine(string value)

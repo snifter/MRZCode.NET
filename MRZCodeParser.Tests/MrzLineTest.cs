@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using MRZCodeParser.CodeTypes;
 using Xunit;
 
 namespace MRZCodeParser.Tests
@@ -16,6 +17,15 @@ namespace MRZCodeParser.Tests
         {
             var target = new TestMrzLine(input);
             Assert.Equal(expected, target.Length);
+        }
+
+
+        [Fact]
+        public void ExceptionIfCodeDoesNotMatchPattern()
+        {
+            const string invalidLine = @"L8988901C4XXX4009078R96121096ZE184226B<<<<<<"; // invalid sex value
+
+            Assert.Throws<MrzCodeException>(() => new MRVASecondLine(invalidLine).Fields);
         }
     }
 
