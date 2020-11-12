@@ -61,7 +61,7 @@ namespace MRZCodeParser.Tests
             const string invalidCode = @"V<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L8988901C4XXX4009078R96121096ZE184226B<<<<<<"; // invalid sex value
 
-            Assert.Throws<MrzCodeException>(() => MrzCode.Parse(invalidCode)[FieldType.Sex]);
+            Assert.Throws<MrzCodeException>(() => MrzCode.Parse(invalidCode));
         }
     }
 }
