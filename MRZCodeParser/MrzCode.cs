@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using MRZCodeParser.CodeTypes;
+using MRZCodeParser.Parsers;
 
 namespace MRZCodeParser
 {
@@ -64,15 +64,8 @@ namespace MRZCodeParser
                 .ToList();
             var type = new CodeTypeDetector(lines).DetectType();
 
-            return type switch
-            {
-                CodeType.TD1 => new TD1MrzCode(lines),
-                CodeType.TD2 => new TD2MrzCode(lines),
-                CodeType.TD3 => new TD3MrzCode(lines),
-                CodeType.MRVA => new MRVAMrzCode(lines),
-                CodeType.MRVB => new MRVBMrzCode(lines),
-                _ => null // never occurs because in this case exception is thrown in CodeTypeDetector
-            };
+            var parser = MrzCodeParserFactory.Create(type);
+            return parser.Parse(lines);
         }
     }
 }
