@@ -33,8 +33,7 @@ namespace MRZCodeParser
 
         protected virtual FieldType ChangeBackwardFieldTypeToCurrent(FieldType type) => type;
 
-        [Obsolete(message: "Will be changed to internal in next version")]
-        public FieldsCollection Fields
+        private FieldsCollection Fields
         {
             get
             {
@@ -72,7 +71,7 @@ namespace MRZCodeParser
                 CodeType.TD3 => new TD3MrzCode(lines),
                 CodeType.MRVA => new MRVAMrzCode(lines),
                 CodeType.MRVB => new MRVBMrzCode(lines),
-                _ => new UnknownMrzCode(lines)
+                _ => null // never occurs because in this case exception is thrown in CodeTypeDetector
             };
         }
     }
