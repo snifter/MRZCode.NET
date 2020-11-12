@@ -26,14 +26,6 @@ namespace MRZCodeParser.Tests
         }
 
         [Fact]
-        public void CodeFieldsTest_BackwardCompatibility()
-        {
-            var target = MrzCode.Parse(MrzSamples.TD2);
-
-            Assert.Equal(target[FieldType.OptionalData], target[FieldType.OptionalData2]);
-        }
-
-        [Fact]
         public void FieldTypeCollectionTest()
         {
             var target = MrzCode.Parse(MrzSamples.TD2);

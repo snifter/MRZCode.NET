@@ -5,13 +5,11 @@ using MRZCodeParser.Parsers;
 
 namespace MRZCodeParser
 {
-    public abstract class MrzCode
+    public class MrzCode
     {
-        protected IEnumerable<string> RawLines { get; }
+        public CodeType Type { get; }
 
-        public abstract CodeType Type { get; }
-
-        public abstract IEnumerable<MrzLine> Lines { get; }
+        public IEnumerable<MrzLine> Lines => lines.AsReadOnly();
 
         public IEnumerable<FieldType> FieldTypes => Lines.SelectMany(x => x.FieldTypes);
 
@@ -20,7 +18,7 @@ namespace MRZCodeParser
             get
             {
                 var fields = Fields;
-                var targetType = ChangeBackwardFieldTypeToCurrent(type);
+                var targetType = type;
 
                 if (fields.Fields.All(x => x.Type != targetType))
                 {
@@ -30,8 +28,6 @@ namespace MRZCodeParser
                 return fields[targetType].Value;
             }
         }
-
-        protected virtual FieldType ChangeBackwardFieldTypeToCurrent(FieldType type) => type;
 
         private FieldsCollection Fields
         {
@@ -47,9 +43,11 @@ namespace MRZCodeParser
             }
         }
 
-        protected MrzCode(IEnumerable<string> lines)
+        private readonly List<MrzLine> lines = new List<MrzLine>(3);
+
+        private MrzCode(CodeType codeType)
         {
-            RawLines = lines;
+            Type = codeType;
         }
 
         public override string ToString()
@@ -66,6 +64,27 @@ namespace MRZCodeParser
 
             var parser = MrzCodeParserFactory.Create(type);
             return parser.Parse(lines);
+        }
+
+        internal class Builder
+        {
+            private readonly MrzCode mrzCode;
+
+            internal Builder(CodeType codeType)
+            {
+                mrzCode = new MrzCode(codeType);
+            }
+
+            internal Builder AddLine(MrzLine line)
+            {
+                mrzCode.lines.Add(line);
+                return this;
+            }
+
+            internal MrzCode Build()
+            {
+                return mrzCode;
+            }
         }
     }
 }
