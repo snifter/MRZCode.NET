@@ -11,7 +11,6 @@ namespace MRZCodeParser.Tests
         [InlineData(MrzSamples.TD3, CodeType.TD3)]
         [InlineData(MrzSamples.MRVA, CodeType.MRVA)]
         [InlineData(MrzSamples.MRVB, CodeType.MRVB)]
-        [InlineData(MrzSamples.UNKNOWN, CodeType.UNKNOWN)]
         public void CodeTypeDetection(string input, CodeType expected)
         {
             var target = MrzCode.Parse(input);
@@ -62,6 +61,12 @@ namespace MRZCodeParser.Tests
 L8988901C4XXX4009078R96121096ZE184226B<<<<<<"; // invalid sex value
 
             Assert.Throws<MrzCodeException>(() => MrzCode.Parse(invalidCode));
+        }
+
+        [Fact]
+        public void ExceptionIfUnknownCodeParsed()
+        {
+            Assert.Throws<MrzCodeException>(() => MrzCode.Parse(MrzSamples.UNKNOWN));
         }
     }
 }

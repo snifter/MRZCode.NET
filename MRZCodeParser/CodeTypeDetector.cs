@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,7 +25,7 @@ namespace MRZCodeParser
                         ? lines.First()[0] == 'V'
                             ? CodeType.MRVB
                             : CodeType.TD2
-                        : CodeType.UNKNOWN;
+                        : throw new MrzCodeException($"Unknown MRZ code: {string.Join(Environment.NewLine, lines)}");
 
             return type;
         }
