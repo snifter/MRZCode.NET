@@ -9,7 +9,7 @@ namespace MRZCodeParser.CodeTypes
         }
 
         protected override string Pattern =>
-            "([0-9]{6})([0-9]{1})([M|F|X|<]{1})([0-9]{6})([0-9]{1})([A-Z]{3})([A-Z0-9<]{11})([0-9]{1})";
+            "([0-9]{6})([0-9]{1})([M|F|X|<]{1})([0-9]{6})([0-9]{1})([A-Z<]{3})([A-Z0-9<]{11})([0-9]{1})";
 
         internal override IEnumerable<FieldType> FieldTypes => new[]
         {
