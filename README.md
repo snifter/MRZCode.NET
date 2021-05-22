@@ -51,3 +51,8 @@ L8988901C4XXX4009078F9612109<<<<<<<<"
 ```
 
 More samples you can find in MRZCode.Samples folder.
+
+# Change log
+
+## v. 0.3.0
+Support for German ID cards by [daniels7](https://github.com/daniels7)
