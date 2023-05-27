@@ -5,6 +5,10 @@ namespace MRZCodeParser.Tests
         public const string TD1 = @"I<UTOD231458907<<<<<<<<<<<<<<<
 7408122F1204159UTO<<<<<<<<<<<6
 ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
+        
+        public const string TD1_NO_EXPIRY_DATE = @"I<UTOD231458907<<<<<<<<<<<<<<<
+7408122F<<<<<<0UTO<<<<<<<<<<<6
+ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
 
         public const string TD1_SINGLE_LETTER_COUNTRY_CODE = @"I<D<<D231458907<<<<<<<<<<<<<<<
 7408122F1204159D<<<<<<<<<<<<<6

@@ -26,6 +26,15 @@ namespace MRZCodeParser.Tests
             Assert.Equal("6", target[FieldType.OverallCheckDigit]);
             Assert.Equal("ERIKSSON, ANNA MARIA", target[FieldType.Names]);
         }
+        
+        [Fact]
+        public void CodeFieldsTest_NoExpiryDate()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD1_NO_EXPIRY_DATE);
+
+            Assert.Equal("", target[FieldType.ExpiryDate]);
+            Assert.Equal("0", target[FieldType.ExpiryDateCheckDigit]);
+        }
 
         [Fact]
         public void CodeFieldsTest_CountrySingleLetter()
