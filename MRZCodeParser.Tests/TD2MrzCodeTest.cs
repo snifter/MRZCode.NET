@@ -26,6 +26,15 @@ namespace MRZCodeParser.Tests
         }
 
         [Fact]
+        public void CodeFieldsTest_CountrySingleLetter()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD2_SINGLE_LETTER_COUNTRY_CODE);
+
+            Assert.Equal("D", target[FieldType.CountryCode]);
+            Assert.Equal("D", target[FieldType.Nationality]);
+        }
+
+        [Fact]
         public void CodeFieldsTest_BackwardCompatibility()
         {
             var target = MrzCode.Parse(MrzSamples.TD2);
