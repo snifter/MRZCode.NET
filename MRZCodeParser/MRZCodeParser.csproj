@@ -3,9 +3,9 @@
     <PropertyGroup>
         <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.3.0</PackageVersion>
+        <PackageVersion>0.4.0</PackageVersion>
         <Authors>snifter</Authors>
-        <AssemblyVersion>0.2.0</AssemblyVersion>
+        <AssemblyVersion>0.4.0</AssemblyVersion>
         <Title>MRZCodeParser</Title>
         <PackageProjectUrl>https://github.com/snifter/MRZCode.NET</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/snifter/MRZCode.NET/blob/master/LICENSE</PackageLicenseUrl>
