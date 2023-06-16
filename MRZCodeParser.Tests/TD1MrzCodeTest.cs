@@ -10,7 +10,7 @@ namespace MRZCodeParser.Tests
         public void CodeFieldsTest()
         {
             var target = MrzCode.Parse(MrzSamples.TD1);
-            
+
             Assert.Equal(DocumentType.I.ToString(), target[FieldType.DocumentType]);
             Assert.Equal("UTO", target[FieldType.CountryCode]);
             Assert.Equal("D23145890", target[FieldType.DocumentNumber]);
@@ -26,13 +26,31 @@ namespace MRZCodeParser.Tests
             Assert.Equal("6", target[FieldType.OverallCheckDigit]);
             Assert.Equal("ERIKSSON, ANNA MARIA", target[FieldType.Names]);
         }
+        
+        [Fact]
+        public void CodeFieldsTest_NoExpiryDate()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD1_NO_EXPIRY_DATE);
+
+            Assert.Equal("", target[FieldType.ExpiryDate]);
+            Assert.Equal("0", target[FieldType.ExpiryDateCheckDigit]);
+        }
+
+        [Fact]
+        public void CodeFieldsTest_CountrySingleLetter()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD1_SINGLE_LETTER_COUNTRY_CODE);
+
+            Assert.Equal("D", target[FieldType.CountryCode]);
+            Assert.Equal("D", target[FieldType.Nationality]);
+        }
 
         [Fact]
         public void FieldTypeCollectionTest()
         {
             var target = MrzCode.Parse(MrzSamples.TD1);
 
-            var expected = new []
+            var expected = new[]
             {
                 FieldType.DocumentType,
                 FieldType.CountryCode,
@@ -51,7 +69,7 @@ namespace MRZCodeParser.Tests
             };
 
             var actual = target.FieldTypes.ToList();
-            
+
             Assert.Equal(expected.Length, actual.Count());
             Assert.Equal(expected, actual);
         }
