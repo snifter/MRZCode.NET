@@ -19,6 +19,9 @@ D231458907UTO7408122F1204159<<<<<<<6";
 
         public const string TD2_SINGLE_LETTER_COUNTRY_CODE = @"I<D<<ERIKSSON<<ANNA<MARIA<<<<<<<<<<<
 D231458907D<<7408122F1204159<<<<<<<6";
+        
+        public const string TD2_NO_EXPIRY_DATE = @"I<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<
+D231458907UTO7408122F<<<<<<0<<<<<<<6";
 
         public const string TD3 = @"P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<
 L898902C36UTO7408122F1204159ZE184226B<<<<<10";

@@ -24,6 +24,15 @@ namespace MRZCodeParser.Tests
             Assert.Equal("", target[FieldType.OptionalData]);
             Assert.Equal("6", target[FieldType.OverallCheckDigit]);
         }
+        
+        [Fact]
+        public void CodeFieldsTest_NoExpiryDate()
+        {
+            var target = MrzCode.Parse(MrzSamples.TD2_NO_EXPIRY_DATE);
+
+            Assert.Equal("", target[FieldType.ExpiryDate]);
+            Assert.Equal("0", target[FieldType.ExpiryDateCheckDigit]);
+        }
 
         [Fact]
         public void CodeFieldsTest_CountrySingleLetter()
