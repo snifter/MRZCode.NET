@@ -6,6 +6,7 @@ namespace MRZCodeParser
         C,
         I,
         P,
-        V
+        V,
+        ID
     }
 }

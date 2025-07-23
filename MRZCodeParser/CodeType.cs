@@ -7,6 +7,7 @@ namespace MRZCodeParser
         TD2,
         TD3,
         MRVA,
-        MRVB
+        MRVB,
+        TD1_LONG_DOC_NUMBER
     }
 }

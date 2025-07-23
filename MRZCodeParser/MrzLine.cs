@@ -27,14 +27,14 @@ namespace MRZCodeParser
                 {
                     fields.Add(new Field(
                         FieldTypes.ElementAt(i),
-                        new ValueCleaner(match.Groups[i + 1].Value).Clean()));
+                        new ValueCleaner(match.Groups[i + 1].Value).Clean(FieldTypes.ElementAt(i))));
                 }
 
                 return new FieldsCollection(fields);
             }
         }
 
-        protected abstract string Pattern { get; }
+        protected abstract string Pattern { get;}
 
         internal abstract IEnumerable<FieldType> FieldTypes { get; }
 

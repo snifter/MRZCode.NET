@@ -72,6 +72,7 @@ namespace MRZCodeParser
                 CodeType.TD3 => new TD3MrzCode(lines),
                 CodeType.MRVA => new MRVAMrzCode(lines),
                 CodeType.MRVB => new MRVBMrzCode(lines),
+                CodeType.TD1_LONG_DOC_NUMBER => new TD1LongDocumentMrzCode(lines),
                 _ => new UnknownMrzCode(lines)
             };
         }

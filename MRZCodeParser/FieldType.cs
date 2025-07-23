@@ -6,6 +6,7 @@ namespace MRZCodeParser
     {
         DocumentType,
         CountryCode,
+        [ReplaceHelper("")]
         DocumentNumber,
         DocumentNumberCheckDigit,
         OptionalData1,

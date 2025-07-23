@@ -16,7 +16,7 @@ namespace MRZCodeParser.Tests
             Assert.Equal("7", target.Fields[FieldType.DocumentNumberCheckDigit].Value);
             Assert.Equal("", target.Fields[FieldType.OptionalData1].Value);
         }
-        
+
         [Fact]
         public void SecondLineFieldsTest()
         {
