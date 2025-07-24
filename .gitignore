@@ -4,4 +4,3 @@ bin/
 *.DotSettings.user
 dist/
 /.vs
-/MRZCodeParser.Tests/TD1DocumentLongMrzCodeTest - Copy.cs
