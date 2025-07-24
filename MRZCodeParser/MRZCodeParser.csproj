@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net9.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.1;net9.0</TargetFrameworks>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>0.4.1</PackageVersion>
+        <PackageVersion>0.4.2</PackageVersion>
         <Authors>snifter</Authors>
-        <AssemblyVersion>0.4.1</AssemblyVersion>
+        <AssemblyVersion>0.4.2</AssemblyVersion>
         <Title>MRZCodeParser</Title>
         <PackageProjectUrl>https://github.com/snifter/MRZCode.NET</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/snifter/MRZCode.NET/blob/master/LICENSE</PackageLicenseUrl>
