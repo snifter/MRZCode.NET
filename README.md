@@ -54,6 +54,9 @@ More samples you can find in MRZCode.Samples folder.
 
 # Change log
 
+## v. 0.5.0
+Support for Belgium ID cards by [tPeif](https://github.com/tPeif)
+
 ## v. 0.4.0
 Support for Moldavian ID cards with no expiration date by [itfintech](https://github.com/itfintech)
 
