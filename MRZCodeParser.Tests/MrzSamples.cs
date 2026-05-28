@@ -14,9 +14,13 @@ ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
 7408122F1204159D<<<<<<<<<<<<<6
 ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
 
-        public const string TD1_LONGER_DOCUMENT_ID = @"IDBEL111111111<5227<<<<<<<<<<<
+        public const string TD1_LONGER_DOCUMENT_ID_1 = @"IDBEL111111111<5227<<<<<<<<<<<
 7408122F2912207BEL110801555552
 ERIKSSON<<ANNA<MARIA<<<<<<<<<<";
+
+        public const string TD1_LONGER_DOCUMENT_ID_2 = @"IDUTO123456789<07<<<<<<<<<<<<<
+8601012M3001019UTO<<<<<<<<<<<6
+SPECIMEN<<JANE<<<<<<<<<<<<<<<<";
 
         public const string TD2 = @"I<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<
 D231458907UTO7408122F1204159<<<<<<<6";
