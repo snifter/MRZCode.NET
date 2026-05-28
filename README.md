@@ -54,6 +54,12 @@ More samples you can find in MRZCode.Samples folder.
 
 # Change log
 
+## v. 0.6.0
+
+- Fixed support for long document numbers in TD1.
+- Obsolete members removed.
+- Added netstandard2.0 and netstandard2.1 target frameworks.
+
 ## v. 0.5.0
 Support for Belgium ID cards by [tPeif](https://github.com/tPeif)
 
