@@ -35,16 +35,6 @@ namespace MRZCodeParser.Tests
             Assert.Equal("D", target[FieldType.Nationality]);
         }
 
-
-        [Fact]
-        public void CodeFieldsTest_BackwardCompatibility()
-        {
-            var target = MrzCode.Parse(MrzSamples.TD3);
-
-            Assert.Equal(target[FieldType.OptionalData], target[FieldType.OptionalData2]);
-            Assert.Equal(target[FieldType.OptionalDataCheckDigit], target[FieldType.OptionalData2CheckDigit]);
-        }
-
         [Fact]
         public void FieldTypeCollectionTest()
         {

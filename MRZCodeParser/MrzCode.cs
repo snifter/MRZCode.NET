@@ -33,8 +33,7 @@ namespace MRZCodeParser
 
         protected virtual FieldType ChangeBackwardFieldTypeToCurrent(FieldType type) => type;
 
-        [Obsolete(message: "Will be changed to internal in next version")]
-        public FieldsCollection Fields
+        private FieldsCollection Fields
         {
             get
             {

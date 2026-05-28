@@ -22,7 +22,6 @@ namespace MRZCodeParser.CodeTypes
             return type switch
             {
                 FieldType.OptionalData2 => FieldType.OptionalData,
-                FieldType.OptionalData2CheckDigit => FieldType.OptionalDataCheckDigit,
                 _ => type
             };
         }
