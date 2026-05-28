@@ -15,7 +15,7 @@ namespace MRZCodeParser
         internal IEnumerable<string> Split()
         {
             var separator = input.Contains("\r\n") ? "\r\n" : "\n";
-            return input.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+            return input.Split(new[] { separator }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
