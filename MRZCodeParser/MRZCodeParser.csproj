@@ -10,11 +10,13 @@
         <Title>MRZCodeParser</Title>
         <PackageProjectUrl>https://github.com/snifter/MRZCode.NET</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <RepositoryUrl>https://github.com/snifter/MRZCode.NET.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Description>MRZ parser for .NET</Description>
     </PropertyGroup>
     <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
             <_Parameter1>MRZCodeParser.Tests</_Parameter1>
         </AssemblyAttribute>
